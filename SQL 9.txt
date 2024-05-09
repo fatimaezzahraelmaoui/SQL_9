@@ -1,0 +1,24 @@
+
+   SELECT COUNT(*) AS nombre_chevaux_noir FROM Chevaux WHERE couleur = 'Noir';
+
+   SELECT COUNT(*) AS nombre_chevaux_anglo_arabe FROM Chevaux WHERE race = 'AngloArabe';
+
+   SELECT numero, nom FROM Chevaux WHERE numero_tatouage = 'T0415';
+
+   SELECT COUNT(*) AS nombre_editions_concours_dubai FROM Concours WHERE nom = 'Concours Dubai';
+
+   SELECT SUM(nombre_participants) AS total_participants_concours_dubai FROM Concours WHERE nom = 'Concours Dubai';
+
+   SELECT concours, annee FROM Resultats WHERE place = 1;
+
+   SELECT cheval FROM Resultats WHERE concours = 'Concours Londres' AND annee = 2018;
+
+   SELECT directeur FROM Etablissement;
+
+   SELECT COUNT(DISTINCT proprietaire) AS nombre_proprietaires FROM Chevaux;
+
+    SELECT COUNT(*) AS nombre_chevaux_achetes_2020 FROM Chevaux WHERE proprietaire = 'N6' AND YEAR(date_achat) = 2020;
+    ```
+
+
+    SELECT SUM(prix_achat) AS total_prix_achat FROM Chevaux WHERE proprietaire = 'N6';
